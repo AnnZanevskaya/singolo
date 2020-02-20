@@ -30,6 +30,78 @@
     src: url(assets/fonts/Lato/Lato-Black.ttf);
 }
 
-h1{
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 10px;
+}
+
+body {
     font-family: 'Lato', 'Helvetica', sans-serif;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+    display: inherit;
+}
+
+.header {
+    background-color: #2d303a;
+    display: flex;
+    /* justify-content: center;
+    flex-direction: column; */
+    height: 89px;
+    border-bottom: 6px solid #323746;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 6.32px;
+    color: #ffffff;
+    text-transform: uppercase;
+    align-self: center;
+    letter-spacing: -0.5px;
+}
+
+.title::after {
+    content: "*";
+    color: #f06c64;
+}
+
+.navigation {
+    width: 100%;
+    align-self: center;
+    text-align: right;
+    padding-top: 9px;
+}
+
+.navigation__link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 6px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 28px;
+    position: relative;
+    letter-spacing: -0.17px;
+}
+
+.navigation_styled a:not(:first-child)::before {
+    content: "\A";
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #494e62;
+    display: inline-block;
+    position: absolute;
+    top: 49%;
+    left: -16px;
+}
+
+.navigation__link_active {
+    color: #f06c64;
 }
