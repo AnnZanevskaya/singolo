@@ -52,13 +52,13 @@ body {
     border-bottom: 6px solid #323746;
 }
 
-.header_content{
+.header_content {
     display: flex;
     justify-content: space-between;
     height: inherit;
 }
 
-.header__title{
+.header__title {
     align-self: center;
 }
 
@@ -71,9 +71,16 @@ body {
     letter-spacing: -0.5px;
 }
 
-.title::after {
+.title__link::after {
     content: "*";
     color: #f06c64;
+}
+
+.title__link {
+    font-size: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    text-decoration: none;
 }
 
 
