@@ -44,16 +44,18 @@ body {
 .wrapper {
     width: 940px;
     margin: 0 auto;
-    display: inherit;
 }
 
 .header {
     background-color: #2d303a;
-    display: flex;
-    /* justify-content: center;
-    flex-direction: column; */
     height: 89px;
     border-bottom: 6px solid #323746;
+}
+
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
 }
 
 .header__title{
@@ -66,7 +68,6 @@ body {
     line-height: 6.32px;
     color: #ffffff;
     text-transform: uppercase;
-    
     letter-spacing: -0.5px;
 }
 
@@ -75,10 +76,9 @@ body {
     color: #f06c64;
 }
 
+
 .header__navigation {
-    width: 100%;
     align-self: center;
-    text-align: right;
     padding-top: 9px;
 }
 
