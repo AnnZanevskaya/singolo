@@ -47,8 +47,8 @@ body {
 }
 
 .header {
-    background-color: #2d303a;
     height: 89px;
+    background-color: #2d303a;
     border-bottom: 6px solid #323746;
 }
 
@@ -83,7 +83,6 @@ body {
     text-decoration: none;
 }
 
-
 .header__navigation {
     align-self: center;
     padding-top: 9px;
@@ -115,4 +114,21 @@ body {
 
 .navigation__link_active {
     color: #f06c64;
+}
+
+.slider {
+    height: 600px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+    box-sizing: border-box;
+}
+
+.slider__content{
+    height: 588px;
+    display: flex;
+    align-items: center;
+}
+
+.slider__image{
+    margin-left: 72px;
 }
