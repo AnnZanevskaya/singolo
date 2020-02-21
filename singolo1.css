@@ -123,12 +123,36 @@ body {
     box-sizing: border-box;
 }
 
-.slider__content{
+.slider__content {
     height: 588px;
     display: flex;
+    position: relative;
     align-items: center;
 }
 
-.slider__image{
+.slider__images {
+    display: inherit;
+    align-items: inherit;
+}
+
+.slider__image {
     margin-left: 72px;
+}
+
+.slider__arrow {
+    position: absolute;
+}
+
+.slider__arrow:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.slider__arrow_left {
+    left: 2px;
+}
+
+.slider__arrow_right {
+    right: 0;
+    transform: rotate(180deg);
 }
