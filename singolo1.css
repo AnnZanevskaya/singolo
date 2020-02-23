@@ -206,7 +206,7 @@ p {
 .service {
   display: flex;
   justify-content: space-between;
-  padding-top: 33px
+  padding-top: 32px;
 }
 
 .service__description {
@@ -215,17 +215,14 @@ p {
 
 .service__image {
   padding-right: 20px;
-  /* padding-top: 37px; */
 }
 
 .service__name {
   color: #666d89;
-  letter-spacing: 0.009em;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .service__details {
   color: #767e9e;
   text-align: justify;
-  letter-spacing: 0.009em;
 }
