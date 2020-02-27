@@ -52,49 +52,58 @@ p {
 }
 
 .portfolio {
-    background-color: #2d303a;
-    height: 870px;
-    padding: 67px 0 0 0;
-
-    border-bottom: 6px solid #323746;
     box-sizing: border-box;
+    height: 870px;
+    padding: 70px 0 0 0;
+
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
 }
 
 .portfolio__title {
+    padding-bottom: 28px;
+
     color: #666d89;
-    padding-bottom: 33px;
 }
 
 .portfolio__details {
-    color: #767e9e;
     padding-bottom: 15px;
+
+    color: #767e9e;
 }
 
 .tags {
     display: flex;
-    padding-bottom: 9px;
     flex-flow: row wrap;
+    padding-bottom: 9px;
 }
 
 .tags__item {
-    width: 29px;
-    height: 22px;
-    border: 1px solid #c5c5c5;
-    border-radius: 4px;
-
+    margin-right: 10px;
     margin-right: 18px;
+    padding: 0 5px 0 5px;
+
+    font-size: 1.2em;
+    line-height: 18px;
+    color: #dedede;
+
+    background-color: transparent;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: 0.27s ease-out;
 }
 
 .gallery {
     display: flex;
-    justify-content: flex-start;
     flex-flow: row wrap;
-
+    justify-content: flex-start;
     padding-bottom: 73px;
 }
 
 .gallery__image {
-    padding: 10px 10px 10px 0;
     width: 220px;
     height: 187px;
+    padding: 10px 10px 10px 0;
 }
