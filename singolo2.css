@@ -67,7 +67,7 @@ p {
 }
 
 .portfolio__details {
-    padding-bottom: 15px;
+    padding-bottom: 11px;
 
     color: #767e9e;
 }
@@ -75,35 +75,47 @@ p {
 .tags {
     display: flex;
     flex-flow: row wrap;
-    padding-bottom: 9px;
 }
 
 .tags__item {
     margin-right: 10px;
-    margin-right: 18px;
     padding: 0 5px 0 5px;
 
     font-size: 1.2em;
-    line-height: 18px;
-    color: #dedede;
+    color: #767e9e;
 
     background-color: transparent;
-    border: 1px solid #c5c5c5;
+    border: 1px solid #767e9e;
     border-radius: 5px;
     cursor: pointer;
 
     transition: 0.27s ease-out;
+    line-height: 21.56px;
+    font-weight: 400;
+}
+
+.tags__item:hover {
+    border-color: rgb(197, 197, 197);
+    color: #dedede;
+}
+
+
+.tags__item_active {
+    color: #dedede;
+    border: 1px solid #dedede;
 }
 
 .gallery {
+    padding-top: 17px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 73px;
 }
 
 .gallery__image {
-    width: 220px;
-    height: 187px;
-    padding: 10px 10px 10px 0;
+    max-width: 220px;
+    max-height: 187px;
+    padding-bottom: 20px;
 }
