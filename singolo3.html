@@ -16,25 +16,61 @@
       <h3 class="contacts__details">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
         commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
         commodo, tortor mauris condimentum nibh.</h3>
-      <div>
+      <div class="contacts__form-info">
         <form class="form" action="#" method="POST">
-          <input class="form__input" type="text" id="name" name="name" placeholder="Name (Required)" required><br>
-          <input class="form__input" type="text" id="email" name="email" placeholder="Email (Required)" required><br>
-          <input class="form__input" type="text" id="subject" name="subject" placeholder="Subject (Required)"
-            required><br>
-          <textarea class="" name="details" id="details" cols="30" rows="10"
+          <input class="input-text" type="text" id="name" name="name" placeholder="Name (Required)" required>
+          <input class="input-text" type="text" id="email" name="email" placeholder="Email (Required)" required>
+          <input class="input-text" type="text" id="subject" name="subject" placeholder="Subject">
+          <textarea class="input-text textarea-text" name="details" id="details" cols="30" rows="10"
             placeholder="Describe your project in detail..."></textarea>
           <button class="form__submit" type="submit">Send</button>
         </form>
 
-        <div>
-          <h3>Contact Information</h3>
-          <p> Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit
+        <div class="contacts__info contacts-info">
+          <h3 class="contacts-info__title">Contact Information</h3>
+          <p class="contacts-info__details"> Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce
+            vitae aliquam tellus. Proin sit
             amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat
             felis.</p>
-          <a>Elm St. 14/05 Lost City </a>
-          <a href="tel:035283318635" class="contact contact--tel">03528 331 86 35</a>
-          <a href="mailto:info@singolo.com" class="contact contact--email">info@singolo.com</a>
+
+          <ul class="contact">
+            <li class="contact__list">
+              <svg class="contact__list_icon" width="12px" height="12px" viewBox="0 0 7 12" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M6.87329102,3.93501974 C6.87329102,7.21714474 3.43579102,11.4975197 3.43579102,11.4975197 C3.43579102,11.4975197 -0.00170898438,7.21714474 -0.00170898438,3.93501974 C-0.00170898438,2.03683224 1.53691602,0.497519741 3.43579102,0.497519741 C5.33397852,0.497519741 6.87329102,2.03683224 6.87329102,3.93501974 Z M5.29204102,3.97626974 C5.29204102,2.95120724 4.46085352,2.12001974 3.43579102,2.12001974 C2.41072852,2.12001974 1.57954102,2.95120724 1.57954102,3.97626974 C1.57954102,5.00133224 2.41072852,5.83251974 3.43579102,5.83251974 C4.46085352,5.83251974 5.29204102,5.00133224 5.29204102,3.97626974 Z"
+                    id="icon-location" fill="#F0D8D9"></path>
+                </g>
+              </svg>
+              <p class="contact__info contact__info_location">Elm St. 14/05 Lost City </p>
+            </li>
+            <li class="contact__list">
+              <svg class="contact__list_icon" width="12px" height="12px" viewBox="0 0 12 12" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M6.88151353,6.84167976 C5.79323477,7.93064599 4.53239886,8.97080125 4.03466429,8.47306668 C3.32106142,7.7594638 2.88107506,7.13798307 1.3088113,8.40225637 C-0.264139932,9.66652968 0.943760119,10.5086911 1.6346762,11.2002946 C2.43215147,11.9977699 5.40549679,11.2422308 8.34378069,8.30394692 C11.2813771,5.36566302 12.0376037,2.39300518 11.2394409,1.59484242 C10.5485248,0.903926345 9.70567597,-0.303973706 8.44209015,1.26897753 C7.17781684,2.84124128 7.79929758,3.28122764 8.51290045,3.99483052 C9.01063502,4.49256509 7.97047977,5.753401 6.88151353,6.84167976 Z"
+                    id="icon-phone" fill="#F0D8D9" fill-rule="nonzero"></path>
+                </g>
+              </svg>
+              <a href="tel:035283318635" class="contact__info contact__info_phone">03528
+                331
+                86 35</a>
+            </li>
+            <li class="contact__list">
+              <svg class="contact__list_icon" width="13px" height="10px" viewBox="0 0 13 10" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M12.7204977,3.03740906 C12.3196645,3.24613123 7.39988778,5.81868623 7.15433228,5.94651954 C6.90877678,6.07507506 6.73688793,6.09168617 6.50000025,6.09168617 C6.26238803,6.09168617 6.0912214,6.07507506 5.8456659,5.94651954 C5.6001104,5.81868623 0.680333689,3.24613123 0.279500442,3.03740906 C-0.00216616319,2.89007575 2.51459657e-07,3.06268683 2.51459657e-07,3.19557569 L2.51459657e-07,8.49379676 C2.51459657e-07,8.7964078 0.403000415,9.18640772 0.716444792,9.18640772 L12.2835534,9.18640772 C12.5969978,9.18640772 13.0000003,8.7964078 13.0000003,8.49379676 L13.0000003,3.19557569 C13.0000003,3.06268683 13.0028866,2.89007575 12.7204977,3.03740906 Z M0.42900041,1.59296493 C0.781444778,1.78218711 5.66366594,4.40457543 5.8456659,4.5020754 C6.02694364,4.60029761 6.26238803,4.64724204 6.49999909,4.64724204 C6.73688793,4.64724204 6.97233232,4.60029761 7.15433228,4.5020754 C7.33633224,4.40457543 12.2185534,1.78218711 12.5709978,1.59296493 C12.9234421,1.40302052 13.257831,0.808631763 12.6092755,0.808631763 L0.390000418,0.808631763 C-0.257110552,0.808631763 0.0758338199,1.40302052 0.42900041,1.59296493 Z"
+                    id="icon-email" fill="#F0D8D9" fill-rule="nonzero"></path>
+                </g>
+              </svg>
+              <a href="mailto:info@singolo.com" class="contact__info contact__info_email">info@singolo.com</a>
+            </li>
+          </ul>
+
         </div>
       </div>
 
