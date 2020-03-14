@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+}
+
+.social__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+
+  background-color: transparent;
+  border: 1px solid #767e9e;
+  border-radius: 50%;
+
+  fill: #767e9e;
+}
+
+.social__icon:last-child {
+  margin-right: 0;
+}
+
+.social__icon:hover {
+  border: 1px solid #4e546a;
+
+  fill: #4e546a;
+}

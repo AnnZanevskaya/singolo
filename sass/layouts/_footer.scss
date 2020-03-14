@@ -1,0 +1,21 @@
+.footer {
+  background-color: $color-dark;
+}
+
+.footer__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.copyright {
+  font-weight: 300;
+  color: #666d89;
+  letter-spacing: -0.004em;
+}
+
+.footer__social {
+  margin-top: -5px;
+}

@@ -1,0 +1,17 @@
+@import "abstract/constants";
+
+//Base
+@import "base/base";
+
+//Layouts
+@import "layouts/wrapper";
+@import "layouts/header";
+@import "layouts/footer";
+
+// Components
+@import "component/slider";
+@import "component/services";
+@import "component/portfolio";
+@import "component/about-us";
+@import "component/social";
+@import "component/contacts";

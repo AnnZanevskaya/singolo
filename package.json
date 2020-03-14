@@ -1,0 +1,20 @@
+{
+  "name": "singolo",
+  "version": "1.0.0",
+  "description": "RS School Singolo task",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/style.scss sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnZanevskaya/singolo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnZanevskaya/singolo/issues"
+  },
+  "homepage": "https://github.com/AnnZanevskaya/singolo#readme"
+}
