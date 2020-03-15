@@ -45,6 +45,7 @@
   color: #dedede;
 
   border-color: rgb(197, 197, 197);
+  @extend %transition;
 }
 
 .tags__item_active {

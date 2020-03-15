@@ -14,6 +14,8 @@
 }
 
 .title {
+  margin: 0;
+
   color: $color-light;
   text-transform: uppercase;
   letter-spacing: -0.8px;
@@ -52,6 +54,8 @@
 
 .navigation__link:hover {
   color: #f06c64;
+
+@extend %transition;
 }
 
 .navigation_styled a:not(:first-child)::before {
