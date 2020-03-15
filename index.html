@@ -15,17 +15,17 @@
       <h1 class="title">
         <a class="title__link" href="#">Singolo</a>
       </h1>
-      <nav class="navigation navigation_styled header__navigation">
-        <a class="navigation__link navigation__link_active" href="#">Home</a>
-        <a class="navigation__link" href="#">Services</a>
-        <a class="navigation__link" href="#">Portfolio</a>
-        <a class="navigation__link" href="#">About</a>
-        <a class="navigation__link" href="#">Contact</a>
+      <nav id="menu" class="navigation navigation_styled header__navigation">
+        <a class="navigation__link navigation__link_active" href="#slider">Home</a>
+        <a class="navigation__link" href="#services">Services</a>
+        <a class="navigation__link" href="#portfolio">Portfolio</a>
+        <a class="navigation__link" href="#about-us">About</a>
+        <a class="navigation__link" href="#contacts">Contact</a>
       </nav>
     </div>
   </header>
   <main>
-    <section class="slider">
+    <section id="slider" class="slider">
       <div class="wrapper slider__wrapper">
         <img src="./assets/images/chev.png" class="slider__arrow slider__arrow_left" alt="Arrow left">
         <img src="./assets/images/chev.png" class="slider__arrow slider__arrow_right" alt="Arrow right">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section id="services" class="services">
       <div class="wrapper services__wrapper">
         <h2 class="services__title">Our Services</h2>
         <h4 class="services__paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -112,7 +112,7 @@
       </div>
     </section>
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="wrapper">
         <h2 class="portfolio__title"> Portfolio</h2>
         <h4 class="portfolio__details">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -139,7 +139,7 @@
         </div>
       </div>
     </section>
-    <section class="about-us">
+    <section id="about-us" class="about-us">
       <div class="wrapper">
         <h2 class="about-us__title">About Us</h2>
         <h4 class="about-us__details">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -334,7 +334,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <div class="wrapper">
         <h2 class="contacts__title">Get a Quote</h2>
         <h3 class="contacts__details">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -464,6 +464,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
