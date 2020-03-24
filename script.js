@@ -6,6 +6,7 @@ window.onload = function () {
 
   addNavClickHandler();
   addTagsClickHandler();
+  addImageClickHandler();
 
   window.addEventListener('scroll', selectNavLinkByScrolling);
 }
@@ -68,13 +69,14 @@ const isUserInBottomPosition = () => {
 }
 
 const initMainSectionsPosition = () => {
-  var navLinks = getNavLinks();
+  const heightBuffer = 50;
+  let navLinks = getNavLinks();
 
   navLinks.forEach(navLink => {
     let sectionOffset = document.querySelector(navLink).offsetTop;
     MAINSECTIONSPOSITION.push({
       key: navLink,
-      value: sectionOffset - 50
+      value: sectionOffset - heightBuffer
     });
   });
 
@@ -173,6 +175,39 @@ const addTagsClickHandler = () => {
   });
 }
 
+const addImageClickHandler = () => {
+  document.querySelector('.gallery').addEventListener('click', (e) => {
+    if (e.target.classList.contains('gallery__image')) {
+      let clickedImage = e.target;
+
+      if (isImageChanged(clickedImage)) {
+        removeSelectedImage();
+        selectImage(clickedImage);
+      } else {
+        removeSelectedImage();
+      }
+    }
+  });
+}
+
+const isImageChanged = (clickedImage) => {
+  let activeImage = document.querySelector('.gallery__image_bordered');
+
+  return activeImage !== clickedImage;
+}
+
+const removeSelectedImage = () => {
+  let images = document.querySelectorAll('.gallery__image');
+
+  images.forEach(image => {
+    image.classList.remove('gallery__image_bordered');
+  });
+}
+
+const selectImage = (clickedImage) => {
+  clickedImage.classList.add('gallery__image_bordered');
+}
+
 const shuffleGalleryImages = () => {
   let images = document.querySelectorAll('.gallery__image');
 
@@ -190,18 +225,18 @@ const getGalleryWrapper = () => {
   return galleryWrapper
 }
 
+const isTagChanged = (clickedTag) => {
+  let activeTag = document.querySelector('.tags__item_active');
+
+  return activeTag !== clickedTag;
+}
+
 const removeSelectedTags = () => {
   let tags = document.querySelectorAll('.tags__item');
 
   tags.forEach(tag => {
     tag.classList.remove('tags__item_active');
   });
-}
-
-const isTagChanged = (clickedTag) => {
-  let activeTag = document.querySelector('.tags__item_active');
-
-  return activeTag !== clickedTag;
 }
 
 const selectTag = (clickedTag) => {
