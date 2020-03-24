@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 30px;
+
+  font-size: 14px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.button-default {
+  color: #222222;
+
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+}

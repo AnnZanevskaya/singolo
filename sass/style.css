@@ -52,6 +52,83 @@ p {
   line-height: 21.56px;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 30px;
+  font-size: 14px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.button-default {
+  color: #222222;
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1010;
+  padding: 50px 40px 30px 40px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  transition: opacity 0.15s linear;
+}
+
+.modal__content {
+  position: relative;
+  box-sizing: border-box;
+  width: 600px;
+  max-width: calc(100% - 0.01px) !important;
+  margin: 0 auto;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  padding: 30px 30px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.modal__header {
+  padding: 15px 30px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal__body {
+  padding: 30px 30px;
+}
+
+.modal-footer {
+  padding: 15px 30px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal__span {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
@@ -458,15 +535,9 @@ p {
 }
 
 .form__submit {
-  width: 70px;
-  height: 25px;
-  font-weight: 400;
-  font-size: 12px;
+  width: 100px;
+  font-size: 1.2rem;
   color: #ffffff;
-  background-color: #d6564f;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .form__submit:hover {

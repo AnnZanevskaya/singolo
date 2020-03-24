@@ -348,27 +348,26 @@
             <input class="input-text" type="text" id="subject" name="subject" placeholder="Subject">
             <textarea class="input-text textarea-text" name="details" id="details" cols="30" rows="10"
               placeholder="Describe your project in detail..."></textarea>
-            <button class="form__submit" type="submit">Send</button>
+            <button class="button button-default form__submit" type="submit">Send</button>
           </form>
 
           <div class="modal" hidden>
             <div class="modal__content">
-              <span class="modal__close">&times;</span>
               <div class="modal__header">
-                <h3 class="modal__title">
+                <h3 class="modal__title text-center">
                   The letter was sent !
                 </h3>
               </div>
               <div class="modal__body">
-                <p class="modal__subject">
+                <h4 class="modal__subject">
                   Subject: <span class="modal__span" id="modal-subject">Without subject</span>
-                </p>
-                <p class="modal__description">
+                </h3>
+                <h4 class="modal__description">
                   Description: <span class="modal__span" id="modal-description">Without Description</span>
-                </p>
+                </h4>
               </div>
               <div class="modal__footer text-right">
-                <button class="button modal__confirm">
+                <button class="button button-default modal__confirm">
                   Ok
                 </button>
               </div>

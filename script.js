@@ -1,43 +1,9 @@
-const CONTACTFORM = document.querySelector(".form");
-var CONTACTMODAL = document.querySelector(".modal");
-
-CONTACTFORM.addEventListener('submit', (event) => {
-  event.preventDefault();
-  fillFormTemplate();
-  CONTACTMODAL.style.display = "block";
-});
-
-document.querySelector(".modal__close").onclick = function () {
-  CONTACTMODAL.style.display = "none";
-}
-
-document.querySelector(".modal__confirm").onclick = function () {
-  CONTACTMODAL.style.display = "none";
-}
-
 const MAINSECTIONSPOSITION = [];
-
-window.onclick = function (event) {
-  if (event.target == CONTACTMODAL) {
-    CONTACTMODAL.style.display = "none";
-  }
-}
-
-function fillFormTemplate() {
-  let subject = document.getElementById("subject").value;
-  let description = document.getElementById("details").value;
-
-  if (subject !== "") {
-    document.getElementById("modal-subject").innerText = subject;
-  }
-
-  if (description !== "") {
-    document.getElementById("modal-description").innerText = description;
-  }
-}
 
 window.onload = function () {
   initMainSectionsPosition();
+  initContactModal();
+  
   addNavClickHandler();
 
   window.addEventListener('scroll', selectNavLinkByScrolling);
@@ -138,4 +104,53 @@ const getNavLinkByValue = (value) => {
   })[0];
 
   return navLink;
+}
+
+/* MODAL EVENTS */
+
+const initContactModal = () => {
+  window.onclick = function (event) {
+    if (event.target == document.querySelector(".modal")) {
+      closeContactModal();
+    }
+  }
+
+  addOpenModelHandler();
+  addCloseModelHandeler();
+}
+
+const addOpenModelHandler = () => {
+  document.querySelector(".form").addEventListener('submit', (event) => {
+    event.preventDefault();
+    fillFormTemplate();
+    showContactModal();
+  });
+}
+
+const addCloseModelHandeler = () => {
+  document.querySelector(".modal__confirm").onclick = function () {
+    closeContactModal();
+  }
+}
+
+const fillFormTemplate = () => {
+  let subject = document.getElementById("subject").value;
+  let description = document.getElementById("details").value;
+
+  if (subject !== "") {
+    document.getElementById("modal-subject").innerText = subject;
+  }
+
+  if (description !== "") {
+    document.getElementById("modal-description").innerText = description;
+  }
+}
+
+const showContactModal = () => {
+  document.querySelector(".modal").style.display = "block";
+}
+
+const closeContactModal = () => {
+  document.querySelector(".modal").style.display = "none";
+  document.querySelector("form").reset();
 }

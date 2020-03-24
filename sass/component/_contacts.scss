@@ -67,17 +67,10 @@
 }
 
 .form__submit {
-  width: 70px;
-  height: 25px;
+  width: 100px;
 
-  font-weight: 400;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: $color-light;
-
-  background-color: #d6564f;
-  border: 1px solid $color-light;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .form__submit:hover {
