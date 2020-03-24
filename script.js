@@ -43,6 +43,8 @@ window.onload = function () {
   window.addEventListener('scroll', selectNavLinkByScrolling);
 }
 
+/* NAV EVENTS */
+
 const addNavClickHandler = () => {
   document.querySelector('.navigation').addEventListener('click', (e) => {
     if (e.target.classList.contains('navigation__link')) {
@@ -67,14 +69,17 @@ const selectNav = (clickedNav) => {
 
 const selectNavLinkByScrolling = () => {
   let nearUserSection = MAINSECTIONSPOSITION[0].key;
+  let userScroll = window.scrollY;
 
-  MAINSECTIONSPOSITION.forEach(sectionPosition => {
-    let userScroll = window.scrollY;
-
-    if (userScroll >= sectionPosition.value) {
-      nearUserSection = sectionPosition.key;
-    }
-  });
+  if (isUserInBottomPosition()) {
+    nearUserSection = MAINSECTIONSPOSITION[MAINSECTIONSPOSITION.length - 1].key;
+  } else {
+    MAINSECTIONSPOSITION.forEach(sectionPosition => {
+      if (userScroll >= sectionPosition.value) {
+        nearUserSection = sectionPosition.key;
+      }
+    });
+  }
 
   let currentSectedNav = document.querySelector('.navigation__link_active');
   let currenSectedNavValue = getNavLinkValue(currentSectedNav);
@@ -87,12 +92,19 @@ const selectNavLinkByScrolling = () => {
   }
 }
 
+const isUserInBottomPosition = () => {
+  const heightBuffer = 10;
+  let userPageHeight = window.scrollY + document.documentElement.clientHeight + heightBuffer;
+  let pageHeight = document.body.scrollHeight;
+
+  return userPageHeight > pageHeight;
+}
+
 const initMainSectionsPosition = () => {
   var navLinks = getNavLinks();
 
   navLinks.forEach(navLink => {
     let sectionOffset = document.querySelector(navLink).offsetTop;
-    console.log(sectionOffset - 50);
     MAINSECTIONSPOSITION.push({
       key: navLink,
       value: sectionOffset - 50
