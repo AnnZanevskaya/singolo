@@ -15,7 +15,7 @@
       <h1 class="title">
         <a class="title__link" href="#">Singolo</a>
       </h1>
-      <nav id="menu" class="navigation navigation_styled header__navigation">
+      <nav class="navigation navigation_styled header__navigation">
         <a class="navigation__link navigation__link_active" href="#slider">Home</a>
         <a class="navigation__link" href="#services">Services</a>
         <a class="navigation__link" href="#portfolio">Portfolio</a>
@@ -350,6 +350,31 @@
               placeholder="Describe your project in detail..."></textarea>
             <button class="form__submit" type="submit">Send</button>
           </form>
+
+          <div class="modal" hidden>
+            <div class="modal__content">
+              <span class="modal__close">&times;</span>
+              <div class="modal__header">
+                <h3 class="modal__title">
+                  The letter was sent !
+                </h3>
+              </div>
+              <div class="modal__body">
+                <p class="modal__subject">
+                  Subject: <span class="modal__span" id="modal-subject">Without subject</span>
+                </p>
+                <p class="modal__description">
+                  Description: <span class="modal__span" id="modal-description">Without Description</span>
+                </p>
+              </div>
+              <div class="modal__footer text-right">
+                <button class="button modal__confirm">
+                  Ok
+                </button>
+              </div>
+
+            </div>
+          </div>
 
           <div class="contacts__info contacts-info">
             <h3 class="contacts-info__title">Contact Information</h3>
