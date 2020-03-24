@@ -3,8 +3,9 @@ const MAINSECTIONSPOSITION = [];
 window.onload = function () {
   initMainSectionsPosition();
   initContactModal();
-  
+
   addNavClickHandler();
+  addTagsClickHandler();
 
   window.addEventListener('scroll', selectNavLinkByScrolling);
 }
@@ -153,4 +154,74 @@ const showContactModal = () => {
 const closeContactModal = () => {
   document.querySelector(".modal").style.display = "none";
   document.querySelector("form").reset();
+}
+
+/* GALLERY EVENTS */
+
+const addTagsClickHandler = () => {
+  document.querySelector('.tags').addEventListener('click', (e) => {
+    if (e.target.classList.contains('tags__item')) {
+      let clickedTag = e.target;
+
+      if (isTagChanged(clickedTag)) {
+        removeSelectedTags();
+        selectTag(clickedTag);
+
+        shuffleGalleryImages();
+      }
+    }
+  });
+}
+
+const shuffleGalleryImages = () => {
+  let images = document.querySelectorAll('.gallery__image');
+
+  let randomImages = shuffle([...images]);
+
+  let galleryWrapper = getGalleryWrapper();
+  randomImages.forEach(image => {
+    galleryWrapper.append(image);
+  });
+}
+
+const getGalleryWrapper = () => {
+  const galleryWrapper = document.querySelector('.gallery');
+  galleryWrapper.innerHTML = '';
+  return galleryWrapper
+}
+
+const removeSelectedTags = () => {
+  let tags = document.querySelectorAll('.tags__item');
+
+  tags.forEach(tag => {
+    tag.classList.remove('tags__item_active');
+  });
+}
+
+const isTagChanged = (clickedTag) => {
+  let activeTag = document.querySelector('.tags__item_active');
+
+  return activeTag !== clickedTag;
+}
+
+const selectTag = (clickedTag) => {
+  clickedTag.classList.add('tags__item_active');
+}
+
+const shuffle = (array) => {
+  let currentIndex = array.length,
+    temporaryValue, randomIndex;
+
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }
