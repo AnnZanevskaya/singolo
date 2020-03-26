@@ -8,6 +8,8 @@ window.onload = function () {
   addTagsClickHandler();
   addImageClickHandler();
 
+  addPhoneClickHandler();
+
   window.addEventListener('scroll', selectNavLinkByScrolling);
 }
 
@@ -259,4 +261,26 @@ const shuffle = (array) => {
   }
 
   return array;
+}
+
+/* SLIDER ACTIONS */
+
+const addPhoneClickHandler = () => {
+  document.querySelectorAll('.phone-base').forEach(el => {
+    el.addEventListener('click', (e) => changePhoneState(e.target));
+  });
+
+  document.querySelectorAll('.phone-screen').forEach(el => {
+    el.addEventListener('click', (e) => changePhoneState(e.target));
+  });
+}
+
+const changePhoneState = (e) => {
+  let phoneElement = e.parentElement;
+  let screenElement = phoneElement.querySelector('.phone-screen');
+
+  if (screenElement.classList.contains("hidden"))
+    screenElement.classList.remove("hidden");
+  else
+    screenElement.classList.add("hidden");
 }
