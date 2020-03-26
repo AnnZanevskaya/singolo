@@ -13,6 +13,23 @@ window.onload = function () {
 
 /* NAV EVENTS */
 
+const initMainSectionsPosition = () => {
+  const heightBuffer = 50;
+  let navLinks = getNavLinks();
+
+  navLinks.forEach(navLink => {
+    let sectionOffset = document.querySelector(navLink).offsetTop;
+    MAINSECTIONSPOSITION.push({
+      key: navLink,
+      value: sectionOffset - heightBuffer
+    });
+  });
+
+  MAINSECTIONSPOSITION.sort(function (a, b) {
+    return a[1] - b[1];
+  });
+}
+
 const addNavClickHandler = () => {
   document.querySelector('.navigation').addEventListener('click', (e) => {
     if (e.target.classList.contains('navigation__link')) {
@@ -66,23 +83,6 @@ const isUserInBottomPosition = () => {
   let pageHeight = document.body.scrollHeight;
 
   return userPageHeight > pageHeight;
-}
-
-const initMainSectionsPosition = () => {
-  const heightBuffer = 50;
-  let navLinks = getNavLinks();
-
-  navLinks.forEach(navLink => {
-    let sectionOffset = document.querySelector(navLink).offsetTop;
-    MAINSECTIONSPOSITION.push({
-      key: navLink,
-      value: sectionOffset - heightBuffer
-    });
-  });
-
-  MAINSECTIONSPOSITION.sort(function (a, b) {
-    return a[1] - b[1];
-  });
 }
 
 const getNavLinks = () => {

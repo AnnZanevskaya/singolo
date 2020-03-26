@@ -28,14 +28,25 @@
     <section id="slider" class="slider">
       <div class="wrapper slider__wrapper">
         <img src="./assets/images/chev.png" class="slider__arrow slider__arrow_left" alt="Arrow left">
-        <img src="./assets/images/chev.png" class="slider__arrow slider__arrow_right" alt="Arrow right">
 
-        <div class="slider__images">
-          <img src="./assets/images/iPhone_Vertical.png" class="slider__image" alt="iPhone Vertical" height="483"
-            width="240">
-          <img src="./assets/images/iPhone_Horizontal.png" class="slider__image" alt="iPhone Horizontal" width="484"
-            height="240">
+        <div class="slider__sliders">
+          <div class="slider-content">
+            <div class="phone-vert">
+              <img class="phone-vert__shadow" src="./assets/images/iphone_shadow.png" alt="iPhone shadow">
+              <img class="phone-vert__base" src="./assets/images/iphone_base.png" alt="iPhone base">
+              <img class="phone-vert__screen" src="./assets/images/iphone_screen_image_vert_.png"
+                alt="iPhone screen image">
+            </div>
+            <div class="phone-hor">
+              <img src="./assets/images/iphone_shadow_hor.png" alt="iPhone shadow">
+              <img class="phone-hor__base" src="./assets/images/iphone_base_hor.png" alt="iPhone base">
+              <img class="phone-hor__screen" src="./assets/images/iphone_screen_image_hor_.png"
+                alt="iPhone screen image">
+            </div>
+          </div>
         </div>
+
+        <img src="./assets/images/chev.png" class="slider__arrow slider__arrow_right" alt="Arrow right">
       </div>
     </section>
     <section id="services" class="services">
@@ -361,10 +372,10 @@
               <div class="modal__body">
                 <h4 class="modal__subject">
                   Subject: <span class="modal__span" id="modal-subject">Without subject</span>
-                </h3>
-                <h4 class="modal__description">
-                  Description: <span class="modal__span" id="modal-description">Without Description</span>
-                </h4>
+                  </h3>
+                  <h4 class="modal__description">
+                    Description: <span class="modal__span" id="modal-description">Without Description</span>
+                  </h4>
               </div>
               <div class="modal__footer text-right">
                 <button class="button button-default modal__confirm">
