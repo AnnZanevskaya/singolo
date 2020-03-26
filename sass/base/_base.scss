@@ -7,7 +7,7 @@
   border: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -39,6 +39,10 @@ p {
   text-align: center;
 }
 
-.text-right{
+.text-right {
   text-align: right;
+}
+
+.hidden {
+  display: none;
 }
