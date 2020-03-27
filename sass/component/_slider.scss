@@ -34,6 +34,7 @@
 }
 
 .slider__sliders {
+  width: 100%;
   margin: 0 71px;
 }
 
@@ -54,29 +55,99 @@
   padding-left: 56px;
 }
 
-.phone-vert__base {
+.phone__item {
   position: absolute;
+}
+
+.phone-vert__base {
   top: 0;
   left: 0;
   z-index: 1;
 }
 
 .phone-vert__screen {
-  position: absolute;
   top: 65px;
   left: 14px;
   z-index: 2;
 }
 
 .phone-hor__base {
-  position: absolute;
   left: 55px;
   z-index: 1;
 }
 
 .phone-hor__screen {
-  position: absolute;
   top: 14px;
   left: 115px;
   z-index: 2;
+}
+
+.phone-small {
+  position: relative;
+
+  width: 25%;
+
+  opacity: 0.5;
+}
+
+.phone-middle {
+  position: relative;
+
+  width: 50%;
+}
+
+.phone-right {
+  padding-right: 43px;
+}
+
+.phone-left__shadow {
+  top: -145px;
+  left: 140px;
+}
+
+.phone-left__base {
+  top: -143px;
+  left: 140px;
+}
+
+.phone-left__screen {
+  top: -100px;
+  left: 149px;
+}
+
+.phone-right__shadow {
+  top: -145px;
+  left: -67px;
+}
+
+.phone-right__base {
+  top: -143px;
+  left: -67px;
+  z-index: 1;
+}
+
+.phone-right__screen {
+  top: -100px;
+  left: -58px;
+  z-index: 2;
+}
+
+.phone-middle__shadow {
+  top: -252px;
+  left: 82px;
+  z-index: 3;
+}
+
+.phone-middle__base {
+  top: -252px;
+  left: 82px;
+  z-index: 4;
+
+  opacity: 0.85;
+}
+
+.phone-middle__screen {
+  top: -183px;
+  left: 96px;
+  z-index: 4;
 }
