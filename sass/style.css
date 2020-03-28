@@ -60,6 +60,10 @@ p {
   text-align: right;
 }
 
+.hidden {
+  display: none;
+}
+
 .button {
   display: inline-block;
   box-sizing: border-box;
@@ -136,7 +140,7 @@ p {
 
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   box-sizing: border-box;
   width: 100%;
   height: 95px;
@@ -239,24 +243,7 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  height: 588px;
-}
-
-.slider__images {
-  display: inherit;
-  align-items: inherit;
-}
-
-.slider__images > img:first-child {
-  padding-top: 1px;
-}
-
-.slider__images > img:last-child {
-  padding-left: 1px;
-}
-
-.slider__image {
-  margin-left: 72px;
+  height: 595px;
 }
 
 .slider__arrow {
@@ -275,6 +262,119 @@ p {
 .slider__arrow_right {
   right: 0;
   transform: rotate(180deg);
+}
+
+.slider__sliders {
+  width: 100%;
+  margin: 0 71px;
+}
+
+.slider__item {
+  display: flex;
+  align-items: center;
+}
+
+.phone-vert {
+  position: relative;
+  margin-right: 18px;
+}
+
+.phone-hor {
+  position: relative;
+  padding-left: 56px;
+}
+
+.phone__item {
+  position: absolute;
+}
+
+.phone-vert__base {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.phone-vert__screen {
+  top: 65px;
+  left: 14px;
+  z-index: 2;
+}
+
+.phone-hor__base {
+  left: 55px;
+  z-index: 1;
+}
+
+.phone-hor__screen {
+  top: 14px;
+  left: 115px;
+  z-index: 2;
+}
+
+.phone-small {
+  position: relative;
+  width: 25%;
+  opacity: 0.5;
+}
+
+.phone-middle {
+  position: relative;
+  width: 50%;
+}
+
+.phone-right {
+  padding-right: 43px;
+}
+
+.phone-left__shadow {
+  top: -145px;
+  left: 140px;
+}
+
+.phone-left__base {
+  top: -143px;
+  left: 140px;
+}
+
+.phone-left__screen {
+  top: -100px;
+  left: 149px;
+}
+
+.phone-right__shadow {
+  top: -145px;
+  left: -67px;
+}
+
+.phone-right__base {
+  top: -143px;
+  left: -67px;
+  z-index: 1;
+}
+
+.phone-right__screen {
+  top: -100px;
+  left: -58px;
+  z-index: 2;
+}
+
+.phone-middle__shadow {
+  top: -252px;
+  left: 82px;
+  z-index: 3;
+}
+
+.phone-middle__base {
+  top: -252px;
+  left: 82px;
+  z-index: 4;
+  opacity: 0.85;
+}
+
+.phone-middle__screen {
+  top: -183px;
+  left: 96px;
+  z-index: 4;
 }
 
 .services {
@@ -376,6 +476,7 @@ p {
 .tags__item_active {
   color: #dedede;
   border: 1px solid #dedede;
+  cursor: default;
 }
 
 .gallery {
@@ -392,7 +493,12 @@ p {
 .gallery__image {
   max-width: 220px;
   max-height: 187px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery__image_bordered {
+  border: 5px solid #F06C64;
+  box-sizing: border-box;
 }
 
 .about-us {
