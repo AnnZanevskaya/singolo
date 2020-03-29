@@ -639,19 +639,34 @@ p {
 }
 
 .about-us {
-  padding-top: 69px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }
 
 .about-us__title {
+  padding-top: 69px;
   padding-bottom: 27px;
   color: #666d89;
+}
+@media (max-width: 940px) {
+  .about-us__title {
+    padding-top: 62px;
+  }
+}
+@media (max-width: 767px) {
+  .about-us__title {
+    padding-top: 43px;
+  }
 }
 
 .about-us__details {
   text-align: justify;
   color: #767e9e;
+}
+@media (max-width: 940px) {
+  .about-us__details {
+    text-align: initial;
+  }
 }
 
 .persons-info {
@@ -661,13 +676,37 @@ p {
   padding-top: 45px;
   padding-bottom: 67px;
 }
+@media (max-width: 940px) {
+  .persons-info {
+    padding-top: 41px;
+    padding-bottom: 69px;
+  }
+}
+@media (max-width: 767px) {
+  .persons-info {
+    padding-top: 28px;
+    padding-bottom: 0px;
+  }
+}
 
 .person {
   max-width: 300px;
 }
+@media (max-width: 940px) {
+  .person {
+    max-width: 219px;
+  }
+}
+@media (max-width: 767px) {
+  .person {
+    max-width: 314px;
+    padding-bottom: 34px;
+  }
+}
 
 .person__image {
   padding-bottom: 15px;
+  max-width: inherit;
 }
 
 .person__title {
@@ -683,8 +722,19 @@ p {
 .person__details {
   padding-bottom: 25px;
   padding-left: 1px;
+  text-align: justify;
   line-height: 21.56px;
   color: #767e9e;
+}
+@media (max-width: 940px) {
+  .person__details {
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .person__details {
+    padding-bottom: 22px;
+  }
 }
 
 .social {
