@@ -1,6 +1,5 @@
 .portfolio {
   box-sizing: border-box;
-  padding: 70px 0 0 0;
   padding-bottom: 47px;
 
   background-color: $color-dark;
@@ -8,9 +7,15 @@
 }
 
 .portfolio__title {
+  padding-top: 70px;
+
   padding-bottom: 28px;
 
   color: #666d89;
+
+  @include media-tablet {
+    padding-top: 52px;
+  }
 }
 
 .portfolio__details {
@@ -60,6 +65,12 @@
   flex-flow: row wrap;
   justify-content: space-between;
   padding-top: 17px;
+  @include media-laptop{
+    padding-top: 27px;
+  }
+  @include media-tablet{
+    padding-top: 24px;
+  }
 }
 
 .gallery img:nth-child(n+13) {
@@ -70,6 +81,12 @@
   max-width: 220px;
   max-height: 187px;
   margin-bottom: 20px;
+
+  @include media-tablet {
+    max-width: 151px;
+    max-height: 128px;
+    margin-bottom: 14px;
+  }
 }
 
 .gallery__image_bordered {
