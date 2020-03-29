@@ -15,6 +15,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include media-tablet {
+    padding-left: 20px;
+  }
+}
+
+.header__logo-line {
+  display: flex;
+  align-items: inherit;
+
+  @include media-tablet {
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.header__hamburger {
+  margin-right: 103px;
+
+  @include media-mobile {
+    position: absolute;
+    left: 0;
+  }
 }
 
 .title {
@@ -59,7 +82,7 @@
 .navigation__link:hover {
   color: #f06c64;
 
-@extend %transition;
+  @extend %transition;
 }
 
 .navigation_styled a:not(:first-child)::before {
@@ -78,4 +101,10 @@
 
 .navigation__link_active {
   color: #f06c64;
+}
+
+.header__navigation {
+  @include media-tablet {
+    display: none;
+  }
 }
