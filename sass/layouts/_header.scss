@@ -9,6 +9,11 @@
 
   background-color: $color-dark;
   border-bottom: 6px solid #323746;
+
+  @include media-tablet{
+    padding: 29px 0 28px 0;
+    height: auto;
+  }
 }
 
 .header__wrapper {
@@ -28,6 +33,11 @@
   @include media-tablet {
     justify-content: center;
     position: relative;
+  }
+  
+  @include media-mobile{
+    justify-content: space-around;
+    width: 100%;
   }
 }
 
