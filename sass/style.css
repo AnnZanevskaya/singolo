@@ -377,7 +377,6 @@ main {
 
 .slider__arrow {
   position: absolute;
-  width: calc(100vw * 16/ 1020);
 }
 
 .slider__arrow:hover {
