@@ -6,7 +6,7 @@
   border-bottom: 6px solid #ea676b;
 
   border-bottom: 6px solid #ea676b;
-  @include media-tablet{
+  @include media-laptop{
     width: 100vw;
     overflow: hidden;
   }
@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   height: 595px;
-  @include media-tablet{
+  @include media-laptop{
     overflow: hidden;
   }
 }

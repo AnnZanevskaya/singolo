@@ -1,21 +1,29 @@
 .footer {
   background-color: $color-dark;
+
+  @include media-tablet{
+    display: flex;
+  }
 }
 
 .footer__content {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding: 27px 0;
+  align-items: center;
 }
 
 .copyright {
   font-weight: 300;
   color: #666d89;
   letter-spacing: -0.004em;
+
+  @include media-tablet{
+    display: none;
+  }
 }
 
 .footer__social {
-  margin-top: -5px;
+  // margin-top: -5px;
 }
