@@ -64,6 +64,10 @@ p {
   display: none;
 }
 
+main {
+  overflow: hidden;
+}
+
 .button {
   display: inline-block;
   box-sizing: border-box;
@@ -193,6 +197,12 @@ p {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
+@media (max-width: 767px) {
+  .header {
+    padding: 29px 0 28px 0;
+    height: auto;
+  }
+}
 
 .header__wrapper {
   display: flex;
@@ -213,6 +223,12 @@ p {
   .header__logo-line {
     justify-content: center;
     position: relative;
+  }
+}
+@media (max-width: 374px) {
+  .header__logo-line {
+    justify-content: space-around;
+    width: 100%;
   }
 }
 
